@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-typescript-mongo",
+  "version": "0.0.0",
+  "description": "NodejsTypescriptMongo",
+  "main": "dist/server.js",
+  "author": {
+    "name": ""
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14",
+    "pug": "^3.0.2",
+    "reflect-metadata": "^0.1.13",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2",
+    "ts-node": "^10.4.0"
+  }
+}

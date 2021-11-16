@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>NodejsTypescriptMongo</Name>
+    <RootNamespace>NodejsTypescriptMongo</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <ScriptArguments>
+    </ScriptArguments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c9f6653d-b43a-4a4e-b826-a796508852d9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>dist/server.js</StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>5000</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="data\node.db" />
+    <Content Include="public\css\AdminLTE.css" />
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\css\bootstrap.min.css" />
+    <Content Include="public\css\font-awesome.css" />
+    <Content Include="public\css\font-awesome.min.css" />
+    <Content Include="public\css\ionicons.css" />
+    <Content Include="public\css\ionicons.min.css" />
+    <Content Include="public\fonts\fontawesome-webfont.eot" />
+    <Content Include="public\fonts\fontawesome-webfont.svg" />
+    <Content Include="public\fonts\fontawesome-webfont.ttf" />
+    <Content Include="public\fonts\fontawesome-webfont.woff" />
+    <Content Include="public\fonts\FontAwesome.otf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\ionicons.eot" />
+    <Content Include="public\fonts\ionicons.svg" />
+    <Content Include="public\fonts\ionicons.ttf" />
+    <Content Include="public\fonts\ionicons.woff" />
+    <Content Include="public\img\ajax-loader.gif" />
+    <Content Include="public\img\ajax-loader1.gif" />
+    <Content Include="public\img\avatar.png" />
+    <Content Include="public\img\avatar04.png" />
+    <Content Include="public\img\avatar2.png" />
+    <Content Include="public\img\avatar3.png" />
+    <Content Include="public\img\avatar5.png" />
+    <Content Include="public\img\blur-background04.jpg" />
+    <Content Include="public\img\blur-background08.jpg" />
+    <Content Include="public\img\blur-background09.jpg" />
+    <Content Include="public\img\credit\american-express.png" />
+    <Content Include="public\img\credit\cirrus.png" />
+    <Content Include="public\img\credit\mastercard.png" />
+    <Content Include="public\img\credit\mestro.png" />
+    <Content Include="public\img\credit\paypal.png" />
+    <Content Include="public\img\credit\paypal2.png" />
+    <Content Include="public\img\credit\visa.png" />
+    <Content Include="public\img\icons.png" />
+    <Content Include="public\img\sprite-skin-flat.png" />
+    <Content Include="public\img\sprite-skin-nice.png" />
+    <Content Include="public\img\user-bg.png" />
+    <Content Include="public\img\user.jpg" />
+    <Content Include="public\img\user2.jpg" />
+    <Content Include="public\js\AdminLTE\app.js" />
+    <Content Include="public\js\AdminLTE\dashboard.js" />
+    <Content Include="public\js\bootstrap.js" />
+    <Content Include="public\js\bootstrap.min.js" />
+    <Content Include="public\js\jquery-ui-1.10.3.js" />
+    <Content Include="public\js\jquery-ui-1.10.3.min.js" />
+    <Content Include="services\user.service.ts">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\editUser.pug" />
+    <Content Include="views\home.pug" />
+    <Content Include="views\layout.pug" />
+    <Content Include="views\login.pug" />
+    <Content Include="views\users.pug" />
+    <None Include="server.ts" />
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="controllers\login.controller.ts" />
+    <TypeScriptCompile Include="controllers\users.controller.ts" />
+    <TypeScriptCompile Include="controllers\home.controller.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="infrastructure\decorators\decorator.RouteDefinition.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="infrastructure\controller\IControllerBase.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="middleware\auth.middleware.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="infrastructure\decorators\decorators.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="middleware\logger.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="models\SqliteDatabase.ts" />
+    <TypeScriptCompile Include="models\MongoDatabase.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="models\User.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="repository\base.sqliteRepository.ts" />
+    <TypeScriptCompile Include="repository\base.mongoRepository.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="repository\IBase.repository.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="services\IUser.service.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="infrastructure\decorators\" />
+    <Folder Include="infrastructure\controller\" />
+    <Folder Include="middleware\" />
+    <Folder Include="controllers\" />
+    <Folder Include="models\" />
+    <Folder Include="data\" />
+    <Folder Include="infrastructure\" />
+    <Folder Include="services\" />
+    <Folder Include="repository\" />
+    <Folder Include="public\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\img\" />
+    <Folder Include="public\img\credit\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\js\AdminLTE\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

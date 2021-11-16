@@ -1,0 +1,25 @@
+//- page-a.pug
+extends layout.pug
+
+block content
+  section.content-header
+    h1= (Object.keys(user).length == 0 ? "Add" : "Edit") + " User"
+  section.content
+     .row
+       .col-md-6
+         .box
+           form(method="post")
+             .box-body
+               if message!=null
+                 .alert.alert-danger=message
+               .form-group
+                 label Name
+                 input(type="text", name="Name" class="form-control", value=user.Name, placeholder="Name", required)
+               .form-group
+                 label Email
+                 input(type="email", name="Email" class="form-control", value=user.Email, placeholder="Email", required)
+               .form-group
+                 label Password
+                 input(type="text", name="Password" class="form-control", value=user.Password, placeholder="Password", required)
+             .box-footer
+                button(type="submit", class="btn btn-success")=(Object.keys(user).length == 0 ? "Create" : "Update")

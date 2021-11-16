@@ -1,0 +1,30 @@
+//- page-a.pug
+extends layout.pug
+
+block content
+  section.content-header
+    h1
+     | Users
+     a(href="/users/add", class="btn btn-success", style="margin-left:20px") Add User
+  section.content
+     .row
+       .col-md-6
+         .box
+           .box-body
+             table.table.table-bordered
+               thead
+                 tr
+                   th|ID
+                   th|Name
+                   th|Email
+                   th
+               tbody
+               each user in users
+                 tr
+                   td=user.Id
+                   td=user.Name
+                   td=user.Email
+                   td
+                     a(href='/users/edit/' + user.Id, class='btn btn-primary btn-sm') Edit
+                     |&nbsp;
+                     a(href='/users/delete/' + user.Id, class='btn btn-danger btn-sm', onclick="return confirm('are you sure?')") Delete

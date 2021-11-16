@@ -1,0 +1,32 @@
+doctype html
+html.bg-black
+  head
+    meta(charset='UTF-8')
+    title AdminLTE | Log in
+    meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
+    // bootstrap 3.0.2
+    link(href='/css/bootstrap.min.css' rel='stylesheet' type='text/css')
+    // font Awesome
+    link(href='/css/font-awesome.min.css' rel='stylesheet' type='text/css')
+    // Theme style
+    link(href='/css/AdminLTE.css' rel='stylesheet' type='text/css')
+  body.bg-black
+    #login-box.form-box
+      .header Sign In
+      form(action='/login' method='post')
+        .body.bg-gray
+          if message!=null
+            .alert.alert-danger=message
+          .form-group
+            input.form-control(type='text' name='email' placeholder='Email' required)
+          .form-group
+            input.form-control(type='password' name='password' placeholder='Password' required)
+        .footer
+          button.btn.bg-olive.btn-block(type='submit') Sign me in
+          p
+            a(href='#') I forgot my password
+          a.text-center(href='register.html') Register a new membership
+    // jQuery 2.0.2
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+    // Bootstrap
+    script(src='/js/bootstrap.min.js' type='text/javascript')

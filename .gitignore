@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/NodejsTypescriptMongo/bin
+/NodejsTypescriptMongo/node_modules
+/NodejsTypescriptMongo/obj/Debug
